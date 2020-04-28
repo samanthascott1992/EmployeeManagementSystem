@@ -1,17 +1,16 @@
-use employees;
+use employees_DB;
+
 
 INSERT INTO department
-(name)
 
-VALUES 
-('Bakery'),
-('Kitchen'),
-('FoodTruck'),
-('FrontEnd');
+VALUES
+(01, 'Bakery'),
+(02,'Kitchen'),
+(03,'FoodTruck'),
+(04,'FrontEnd');
 
 INSERT INTO role
 (title, salary, department_id)
-
 VALUES
 ('Bakery Lead', 100000, 1),
 ('Bakery Assistant', 80000, 1),
@@ -24,7 +23,6 @@ VALUES
 
 INSERT INTO employee
 (first_name, last_name, role_id, manager_id)
-
 VALUES
 ('Samantha', 'Scott', 1, NULL),
 ('Cameron', 'Scott', 2, 1),
@@ -34,3 +32,8 @@ VALUES
 ('Krissy','Scott', 6, 5),
 ('Leslie', 'Scott', 7, NULL),
 ('Craig', 'Scott', 8, 7);
+
+SELECT * FROM department;
+SELECT * FROM role;
+SELECT * FROM employee;
+
